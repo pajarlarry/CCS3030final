@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pet Shop</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <h1 class="logo">Pet Shop</h1>
+    <nav>
+      <a href="#" onclick="showPage('landing-page')">Home</a>
+      <a href="#" onclick="showPage('category-page')">Categories</a>
+      <a href="#" onclick="showPage('pet-listing-page')">Find a Pet</a>
+      <a href="#" onclick="showPage('login-page')">Login</a>
+      <a href="#" onclick="showPage('register-page')">Register</a>
+    </nav>
+  </header>
+
+  <!-- Landing Page -->
+  <section id="landing-page" class="page">
+    <div class="center-content">
+      <img src="images/paw-icon.png" alt="Paw Icon" class="paw-icon">
+      <h1>Stub Code 350 Pet Shop</h1>
+      <p>Find the perfect companion for your family.</p>
+      <button class="cta-button" onclick="showPage('category-page')">Explore Categories</button>
+    </div>
+  </section>
+
+  <!-- Category Page -->
+  <section id="category-page" class="page">
+    <h2 class="page-title">Explore Categories</h2>
+    <div class="categories">
+      <div class="category-item">
+        <img src="images/dog-icon.png" alt="Dogs">
+        <p>Dogs</p>
+      </div>
+      <div class="category-item">
+        <img src="images/cat-icon.png" alt="Cats">
+        <p>Cats</p>
+      </div>
+      <div class="category-item">
+        <img src="images/fish-icon.png" alt="Fish">
+        <p>Fish</p>
+      </div>
+      <div class="category-item">
+        <img src="images/bird-icon.png" alt="Birds">
+        <p>Birds</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Register Page -->
+<section id="register-page" class="page">
+  <div class="register-container">
+    <img src="images/paw-icon.png" alt="Paw Icon" class="paw-icon">
+    <h2>Register</h2>
+    <p class="register-subtitle">Create an account to find a friend for your beloved pet!</p>
+    
+    <form class="register-form" onsubmit="validateRegisterForm(event)">
+      <input type="text" id="full-name" placeholder="Full Name" required>
+      <input type="email" id="email-address" placeholder="Email Address" required>
+      <input type="password" id="password" placeholder="Password" required>
+      <input type="password" id="confirm-password" placeholder="Confirm Password" required>
+      <p id="error-message" class="error-message"></p>
+      <button type="submit" class="register-button">Sign Up</button>
+    </form>
+  </div>
+</section>
+
+
+  <!-- Pet Listing Page -->
+  <section id="pet-listing-page" class="page">
+    <h2 class="page-title">Find Your Perfect Pet</h2>
+    <input type="text" placeholder="Search for a pet..." class="search-bar">
+    <div class="pet-cards">
+      <div class="pet-card">
+        <img src="images/siberian-husky.jpg" alt="Siberian Husky">
+        <h3>Siberian Husky</h3>
+        <p><strong>Age:</strong> 10 months</p>
+        <p><strong>Price:</strong> ₱35,000</p>
+        <button class="adopt-button">Adopt</button>
+      </div>
+      <div class="pet-card">
+        <img src="images/labrador.jpg" alt="Labrador">
+        <h3>Labrador</h3>
+        <p><strong>Age:</strong> 12 months</p>
+        <p><strong>Price:</strong> ₱12,000</p>
+        <button class="adopt-button">Adopt</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Login Page -->
+  <section id="login-page" class="page">
+    <div class="login-container">
+      <img src="images/paw-icon.png" alt="Paw Icon" class="paw-icon">
+      <h2>Log In</h2>
+      <p class="login-subtitle">Find a friend for your beloved pet!</p>
+      
+      <div class="social-login-buttons">
+        <button class="social-login facebook">
+          <img src="images/facebook-icon.png" alt="Facebook Icon"> Connect with Facebook
+        </button>
+        <button class="social-login google">
+          <img src="images/google-icon.png" alt="Google Icon"> Sign in with Google
+        </button>
+      </div>
+  
+      <div class="divider">
+        <span>or</span>
+      </div>
+  
+      <form class="login-form">
+        <input type="email" placeholder="Email Address" required>
+        <input type="password" placeholder="Password" required>
+        <a href="#" class="forgot-password">Forgot Password?</a>
+        <button type="submit" class="login-button">Sign In</button>
+      </form>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
